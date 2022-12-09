@@ -1,0 +1,35 @@
+*{
+    margin: 0%;
+    font-family: Arial;
+}
+.quoteCont{
+    border: 2px solid black;
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    
+    left: 25%;
+    top: 45%;
+    width: 50%;
+    height: auto;
+    min-height: 20%;
+}
+
+#quote{
+    padding-top: 1em;
+    font-size: 1.5em;
+    width: 100%;
+    height: auto;
+    display: block;
+    color: black;
+    margin-top: .2em;
+}
+#quoteAuthor{
+    display: block;
+    margin-top: 1em;
+    width: 100%;
+    font-weight:bold;
+    font-size: 1.3em;
+    color: black;
+    padding-bottom: 1em;
+}
