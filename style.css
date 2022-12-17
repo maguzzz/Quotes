@@ -2,6 +2,10 @@
     margin: 0%;
     font-family: Arial;
 }
+
+body{
+    height: 100vh;
+}
 .quoteCont{
     text-align: center;
     position: absolute;
@@ -31,4 +35,8 @@
     font-size: 1.3em;
     color: black;
     padding-bottom: 1em;
+}
+
+.theme{
+    float: right;
 }
