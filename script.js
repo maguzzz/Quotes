@@ -13,3 +13,8 @@ fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
 		document.getElementById("quoteAuthor").innerHTML = `-${data.originator.name}`;
 	})
 	.catch(err => console.error(err));
+
+const darkModeButton = document.getElementById("theme")
+darkModeButton.addEventListener("click", () =>{
+	document.body.classList.toggle("darkMode")
+})
