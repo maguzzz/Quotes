@@ -1,3 +1,4 @@
+//Api key etc
 const options = {
 	method: 'GET',
 	headers: {
@@ -6,6 +7,7 @@ const options = {
 	}
 };
 
+//Getting data from api
 fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
 	.then(response => response.json())
 	.then(data =>{
@@ -14,6 +16,7 @@ fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
 	})
 	.catch(err => console.error(err));
 
+//Theme switch button
 const darkModeButton = document.getElementById("theme")
 darkModeButton.addEventListener("click", () =>{
 	document.body.classList.toggle("darkMode")
