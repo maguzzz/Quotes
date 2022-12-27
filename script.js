@@ -32,12 +32,3 @@ darkModeButton.addEventListener("click", () =>{
 		console.log("lightButton")
 	}
 })
-
-let savedTheme = localStorage.getItem("theme");
-console.log(savedTheme)
-
-if(savedTheme = "darkMode"){
-	document.body.classList.toggle("darkMode")
-}else if(savedTheme = "lightMode"){
-	document.body.classList.toggle("lightMode")
-}
