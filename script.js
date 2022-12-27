@@ -17,7 +17,27 @@ fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
 	.catch(err => console.error(err));
 
 //Theme switch button
-const darkModeButton = document.getElementById("theme")
+let darkModeButton = document.getElementById("theme")
+
 darkModeButton.addEventListener("click", () =>{
-	document.body.classList.toggle("darkMode")
+	if(darkModeButton = "darkMode"){
+		localStorage.removeItem('theme');
+		document.body.classList.toggle("darkMode")
+		localStorage.setItem("theme","darkMode");
+		console.log("darkButton")
+	}else{
+		localStorage.removeItem('theme');
+		document.body.classList.toggle("lightMode")
+		localStorage.setItem("theme","lightMode");
+		console.log("lightButton")
+	}
 })
+
+let savedTheme = localStorage.getItem("theme");
+console.log(savedTheme)
+
+if(savedTheme = "darkMode"){
+	document.body.classList.toggle("darkMode")
+}else if(savedTheme = "lightMode"){
+	document.body.classList.toggle("lightMode")
+}
