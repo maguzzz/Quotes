@@ -6,6 +6,12 @@
     --primary-color: #222223;
     --secondary-color: white;
 }
+
+.lightMode{
+    --primary-color: white;
+    --secondary-color: black;
+}
+
 *{
     margin: 0%;
     font-family: Arial;
