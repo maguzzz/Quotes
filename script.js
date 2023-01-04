@@ -11,11 +11,13 @@ const options = {
 fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
 	.then(response => response.json())
 	.then(data =>{
-		document.getElementById("quote").innerHTML = `❝${data.content}❞`;
-		document.getElementById("quoteAuthor").innerHTML = `-${data.originator.name}`;
+		var quoteText = document.getElementById("quote").innerHTML = `❝${data.content}❞`;
+		var quoteAuthor = document.getElementById("quoteAuthor").innerHTML = `-${data.originator.name}`;
 	})
 	.catch(err => console.error(err));
 
+
+var quoteAndAuthor = quoteText + quoteAuthor
 //Theme switch button
 let darkModeButton = document.getElementById("theme")
 
@@ -32,3 +34,8 @@ darkModeButton.addEventListener("click", () =>{
 		console.log("lightButton")
 	}
 })
+
+//Next Button 
+function refreshPage(){
+    window.location.reload();
+} 
