@@ -63,3 +63,27 @@ body{
     border: 2px solid var(--secondary-color);
     color:var(--secondary-color);
 }
+
+.settings{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    text-align: center;
+    top: 75%;
+}
+
+.settingButton{
+    width: 8em;
+    height: 3em;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    font-size: 1.1em;
+    border-radius: 5%;
+    background-color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    color:var(--secondary-color);
+}
+
+.settingButton:hover {
+    transform: translateY(-1px);
+  }
