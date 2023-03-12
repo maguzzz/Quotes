@@ -10,19 +10,22 @@ const options = {
 let quoteText;
 let quoteAuthor;
 
+window.onload = refreshDiv()
 //Getting data from api
-fetch("https://quotes15.p.rapidapi.com/quotes/random/", options)
-  .then((response) => response.json())
-  .then((data) => {
-    quoteText = document.getElementById(
-      "quote"
-    ).innerHTML = `❝${data.content}❞`;
-    quoteAuthor = document.getElementById(
-      "quoteAuthor"
-    ).innerHTML = `-${data.originator.name}`;
-    return quoteText, quoteAuthor;
-  })
-  .catch((err) => console.error(err));
+function refreshDiv() {
+  fetch("https://quotes15.p.rapidapi.com/quotes/random/", options)
+    .then((response) => response.json())
+    .then((data) => {
+      quoteText = document.getElementById(
+        "quote"
+      ).innerHTML = `❝${data.content}❞`;
+      quoteAuthor = document.getElementById(
+        "quoteAuthor"
+      ).innerHTML = `-${data.originator.name}`;
+      return quoteText, quoteAuthor;
+    })
+    .catch((err) => console.error(err));
+}
 
 var quoteAndAuthor = quoteText + quoteAuthor;
 //Theme switch button
