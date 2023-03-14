@@ -10,7 +10,9 @@ const options = {
 let quoteText;
 let quoteAuthor;
 
+//Loading First Quote
 window.onload = refreshDiv()
+
 //Getting data from api
 function refreshDiv() {
   fetch("https://quotes15.p.rapidapi.com/quotes/random/", options)
@@ -28,6 +30,7 @@ function refreshDiv() {
 }
 
 var quoteAndAuthor = quoteText + quoteAuthor;
+
 //Theme switch button
 let darkModeButton = document.getElementById("theme");
 
@@ -50,6 +53,7 @@ function refreshPage() {
   window.location.reload();
 }
 
+//Function to copy the Quote
 function textCopy() {
   navigator.clipboard.writeText(quoteText);
 }
