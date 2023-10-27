@@ -29,8 +29,6 @@ function refreshDiv() {
     .catch((err) => console.error(err));
 }
 
-var quoteAndAuthor = quoteText + quoteAuthor;
-
 //Theme switch button
 let darkModeButton = document.getElementById("theme");
 
@@ -55,5 +53,5 @@ function refreshPage() {
 
 //Function to copy the Quote
 function textCopy() {
-  navigator.clipboard.writeText(quoteText);
+  navigator.clipboard.writeText(quoteText + quoteAuthor);
 }
